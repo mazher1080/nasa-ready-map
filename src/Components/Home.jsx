@@ -1,8 +1,14 @@
-import { GoogleMap, useJsApiLoader } from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader, Circle, Marker, OverlayView } from "@react-google-maps/api";
+import { useState } from "react"
 
+const displayBoxStyle = {
+  background: `white`,
+  border: `1px solid #ccc`,
+  padding: 15
+}
 
 const Home = () => {
-
+  const [displayBox, setDisplayBox] = useState(false);
   const containerStyle = {
     width: '1000px',
     height: '700px'
@@ -24,8 +30,27 @@ const Home = () => {
         center={center}
         zoom={10}
       >
-        { /* Child components, such as markers, info windows, etc. */ }
-        <></>
+        <Circle
+          center={{lat: 47.56, lng: -52.709}}
+          radius={1500}
+          options={{strokeColor: "#ff0000"}}
+          
+        />
+        <Marker
+          onClick={() => {
+            setDisplayBox(!displayBox)
+          }}
+          position={{lat: 47, lng: -51}}
+        />
+        {displayBox && 
+          <OverlayView
+            position={{lat: 47, lng: -51}}
+            mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}
+          >
+          <div style={displayBoxStyle}>
+            <h3>Location: </h3>
+          </div>
+          </OverlayView>}
       </GoogleMap>
   ) : <></>
 
