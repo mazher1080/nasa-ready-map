@@ -7,26 +7,9 @@ import References from "./Components/References";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { Routes } from "react-router-dom";
-import {useJsApiLoader, GoogleMap } from '@react-google-maps/api'
-
-
-const containerStyle = {
-  width: '1000px',
-  height: '700px'
-};
-
-const center = {
-  lat: -3.745,
-  lng: -38.523
-};
 
 
 function App() {
-
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: 'AIzaSyAbgg5uwWxwaNDLdbE2xwCPEPiJarmiiDk'
-  })
 
   return (
     <div className="App">
