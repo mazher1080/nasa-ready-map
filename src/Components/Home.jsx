@@ -1,11 +1,13 @@
 import { GoogleMap, useJsApiLoader, Circle, Marker, OverlayView } from "@react-google-maps/api";
-import { useState } from "react"
+import React, { useEffect, useState } from "react"
 
 const displayBoxStyle = {
   background: `white`,
   border: `1px solid #ccc`,
   padding: 15
 }
+
+const fireWarningURL = "https://api.meteomatics.com/2024-10-06T00:00:00Z/forest_fire_warning:idx/83.3362128,-141.00275_41.6765597,-52.3237664:0.07,0.07/png"
 
 const Home = () => {
   const [displayBox, setDisplayBox] = useState(false);
@@ -22,7 +24,7 @@ const Home = () => {
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: 'AIzaSyAbgg5uwWxwaNDLdbE2xwCPEPiJarmiiDk'
-  })
+  });
 
   return isLoaded ? (
       <GoogleMap
@@ -51,6 +53,12 @@ const Home = () => {
             <h3>Location: </h3>
           </div>
           </OverlayView>}
+        <OverlayView
+          mapPaneName={OverlayView.OVERLAY_LAYER}
+          position={{lat: 70, lng: -160}}
+        >
+          <img src={fireWarningURL} />
+        </OverlayView>
       </GoogleMap>
   ) : <></>
 
