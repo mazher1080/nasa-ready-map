@@ -17,7 +17,7 @@ function App() {
         <Router>
           <NavBar />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/nasa-ready-map" element={<Home />} />
           </Routes>
         </Router>
       </>

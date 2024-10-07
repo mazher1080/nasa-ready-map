@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
+import logo from "../images/readymap-high-resolution-logo-transparent.png"
 
 const NavBar = () => {
   return (
     <>
       <div className="nav-bar">
         <div className="nav-container">
-          <Link to="/">
-            <img className="nav-logo" src="../images/logo_placeholder.png" />
+          <Link to="/nasa-ready-map">
+            <img className="nav-logo" src={logo} />
           </Link>
           <div className="nav-items">
-            <Link to="/">Home</Link>
+            <Link to="/nasa-ready-map">Home</Link>
           </div>
         </div>
       </div>
