@@ -12,7 +12,7 @@ const fireWarningURL = "https://api.meteomatics.com/2024-10-06T00:00:00Z/forest_
 const Home = () => {
   const [displayBox, setDisplayBox] = useState(false);
   const containerStyle = {
-    width: '1000px',
+    width: '1500px',
     height: '700px'
   };
 
