@@ -1,15 +1,16 @@
 {
   "files": {
     "main.css": "/nasa-ready-map/static/css/main.18c5fda3.css",
-    "main.js": "/nasa-ready-map/static/js/main.1a8c8ba2.js",
+    "main.js": "/nasa-ready-map/static/js/main.b5c370de.js",
     "static/js/453.9b1de6a3.chunk.js": "/nasa-ready-map/static/js/453.9b1de6a3.chunk.js",
+    "static/media/readymap-high-resolution-logo-transparent.png": "/nasa-ready-map/static/media/readymap-high-resolution-logo-transparent.3ce43b6d175c02aa21ca.png",
     "index.html": "/nasa-ready-map/index.html",
     "main.18c5fda3.css.map": "/nasa-ready-map/static/css/main.18c5fda3.css.map",
-    "main.1a8c8ba2.js.map": "/nasa-ready-map/static/js/main.1a8c8ba2.js.map",
+    "main.b5c370de.js.map": "/nasa-ready-map/static/js/main.b5c370de.js.map",
     "453.9b1de6a3.chunk.js.map": "/nasa-ready-map/static/js/453.9b1de6a3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.18c5fda3.css",
-    "static/js/main.1a8c8ba2.js"
+    "static/js/main.b5c370de.js"
   ]
 }
